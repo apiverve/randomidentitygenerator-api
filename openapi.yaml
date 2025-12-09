@@ -1,0 +1,69 @@
+openapi: 3.0.4
+info:
+  title: Random Identity Generator
+  description: Random Identity is a simple tool for generating random identities. It returns a random name, address, and more.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/randomidentitygenerator:
+    get:
+      summary: Generate Random Identities
+      description: Random Identity is a simple tool for generating random identities. It returns a random name, address, and more.
+      operationId: randomidentitygenerator
+      parameters: []
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  name: Candace Hauck
+                  username: Efren_Kozey
+                  email: Nickolas.Herman@gmail.com
+                  phone: (524) 820-4614 x1999
+                  website: louie.info
+                  company:
+                    name: Osinski, Schuppe and Pfannerstill
+                    catchPhrase: Fully-configurable analyzing artificial intelligence
+                    bs: productize viral schemas
+                  gender: Female
+                  birthdate: 1961-08-22
+                  cell: 1-275-508-8744 x80019
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []

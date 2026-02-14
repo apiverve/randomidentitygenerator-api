@@ -14,12 +14,14 @@ const api = new randomidentitygeneratorAPI({
 });
 
 // Example query
-// This API does not require a Query
+var query = {
+  count: 1
+};
 
 // Make the API request using callback
 console.log('Making request to Random Identity Generator API...\n');
 
-api.execute(function (error, data) {
+api.execute(query, function (error, data) {
     if (error) {
         console.error('Error occurred:');
         if (error.error) {

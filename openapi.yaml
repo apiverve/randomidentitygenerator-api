@@ -1,25 +1,34 @@
 openapi: 3.0.4
 info:
   title: Random Identity Generator
-  description: Random Identity is a simple tool for generating random identities. It returns a random name, address, and more.
+  description: >-
+    Random Identity is a simple tool for generating random identities. It
+    returns a random name, address, and more.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/randomidentitygenerator:
     get:
       summary: Generate Random Identities
-      description: Random Identity is a simple tool for generating random identities. It returns a random name, address, and more.
+      description: Generate a random identity with a name, address, and more
       operationId: randomidentitygenerator
-      parameters: []
+      parameters:
+        - name: count
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: The number of identities to create
+          example: 5
       responses:
         '200':
           description: Successful Response
@@ -35,30 +44,32 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
-                  name: Candace Hauck
-                  username: Efren_Kozey
-                  email: Nickolas.Herman@gmail.com
-                  phone: (524) 820-4614 x1999
-                  website: louie.info
-                  company:
-                    name: Osinski, Schuppe and Pfannerstill
-                    catchPhrase: Fully-configurable analyzing artificial intelligence
-                    bs: productize viral schemas
-                  gender: Female
-                  birthdate: 1961-08-22
-                  cell: 1-275-508-8744 x80019
+                  count: 1
+                  identities:
+                    - name: Dr. Brent Carter
+                      username: Fannie_Treutel28
+                      email: Greyson.DAmore99@hotmail.com
+                      phone: 862-207-2982 x6455
+                      website: mervin.net
+                      company:
+                        name: Runolfsson, Gaylord and Christiansen
+                        catchPhrase: Profit-focused didactic algorithm
+                        bs: brand ubiquitous paradigms
+                      gender: Male
+                      birthdate: '1978-11-23'
+                      cell: 1-514-413-1724
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -66,4 +77,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []

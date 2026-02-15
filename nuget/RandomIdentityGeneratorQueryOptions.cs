@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace APIVerve.API.RandomIdentityGenerator
 {
@@ -9,6 +10,10 @@ namespace APIVerve.API.RandomIdentityGenerator
     /// </summary>
     public class RandomIdentityGeneratorQueryOptions
     {
-        // This API does not require any query parameters
+        /// <summary>
+        /// The number of identities to create
+        /// </summary>
+        [JsonProperty("count")]
+        public string Count { get; set; }
     }
 }

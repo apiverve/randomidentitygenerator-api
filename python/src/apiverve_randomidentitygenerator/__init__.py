@@ -1,1 +1,3 @@
-from .apiClient import RandomidentitygeneratorAPIClient
+from .apiClient import RandomidentitygeneratorAPIClient, RandomidentitygeneratorAPIClientError
+
+__all__ = ['RandomidentitygeneratorAPIClient', 'RandomidentitygeneratorAPIClientError']

@@ -228,8 +228,9 @@ from apiverve_randomidentitygenerator.apiClient import RandomidentitygeneratorAP
 
 api = RandomidentitygeneratorAPIClient("[YOUR_API_KEY]")
 
+query = { "count": 1 }
+
 try:
-    query = { "count": 1 }
     result = api.execute(query)
     print(result)
 finally:

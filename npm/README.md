@@ -60,7 +60,8 @@ Using the API is simple. All you have to do is make a request. The API will retu
 
 ```javascript
 var query = {
-  count: 1
+  count: 1,
+  includeAvatar: false
 };
 
 api.execute(query, function (error, data) {
@@ -80,7 +81,8 @@ You can also use promises to make requests. The API returns a promise that you c
 
 ```javascript
 var query = {
-  count: 1
+  count: 1,
+  includeAvatar: false
 };
 
 api.execute(query)
@@ -101,7 +103,8 @@ You can also use async/await to make requests. The API returns a promise that yo
 ```javascript
 async function makeRequest() {
     var query = {
-  count: 1
+  count: 1,
+  includeAvatar: false
 };
 
     try {
@@ -122,19 +125,25 @@ async function makeRequest() {
   "status": "ok",
   "error": null,
   "data": {
-    "name": "Candace Hauck",
-    "username": "Efren_Kozey",
-    "email": "Nickolas.Herman@gmail.com",
-    "phone": "(524) 820-4614 x1999",
-    "website": "louie.info",
-    "company": {
-      "name": "Osinski, Schuppe and Pfannerstill",
-      "catchPhrase": "Fully-configurable analyzing artificial intelligence",
-      "bs": "productize viral schemas"
-    },
-    "gender": "Female",
-    "birthdate": "1961-08-22",
-    "cell": "1-275-508-8744 x80019"
+    "count": 1,
+    "identities": [
+      {
+        "name": "Dr. Brent Carter",
+        "username": "Fannie_Treutel28",
+        "email": "Greyson.DAmore99@hotmail.com",
+        "phone": "862-207-2982 x6455",
+        "website": "mervin.net",
+        "company": {
+          "name": "Runolfsson, Gaylord and Christiansen",
+          "catchPhrase": "Profit-focused didactic algorithm",
+          "bs": "brand ubiquitous paradigms"
+        },
+        "gender": "Male",
+        "birthdate": "1978-11-23",
+        "cell": "1-514-413-1724",
+        "avatar": "https://storage.googleapis.com/apiverve/APIResources/faces/Male/40-50/87654321.jpg?X-Goog-Signature=..."
+      }
+    ]
   }
 }
 ```

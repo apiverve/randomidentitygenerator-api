@@ -29,6 +29,13 @@ paths:
           required: false
           description: The number of identities to create
           example: 5
+        - name: includeAvatar
+          in: query
+          schema:
+            type: boolean
+          required: false
+          description: Include an AI-generated face avatar for each identity
+          example: true
       responses:
         '200':
           description: Successful Response
@@ -64,6 +71,8 @@ paths:
                       gender: Male
                       birthdate: '1978-11-23'
                       cell: 1-514-413-1724
+                      avatar: >-
+                        https://storage.googleapis.com/apiverve/APIResources/faces/Male/40-50/87654321.jpg?X-Goog-Signature=...
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':

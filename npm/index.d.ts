@@ -4,30 +4,48 @@ declare module '@apiverve/randomidentitygenerator' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface randomidentitygeneratorResponse {
     status: string;
     error: string | null;
     data: RandomIdentityGeneratorData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface RandomIdentityGeneratorData {
-      name:      string;
-      username:  string;
-      email:     string;
-      phone:     string;
-      website:   string;
+      count:      number | null;
+      identities: Identity[];
+  }
+  
+  interface Identity {
+      name:      null | string;
+      username:  null | string;
+      email:     null | string;
+      phone:     null | string;
+      website:   null | string;
       company:   Company;
-      gender:    string;
-      birthdate: Date;
-      cell:      string;
+      gender:    null | string;
+      birthdate: Date | null;
+      cell:      null | string;
+      avatar:    null | string;
   }
   
   interface Company {
-      name:        string;
-      catchPhrase: string;
-      bs:          string;
+      name:        null | string;
+      catchPhrase: null | string;
+      bs:          null | string;
   }
 
   export default class randomidentitygeneratorWrapper {

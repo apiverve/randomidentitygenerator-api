@@ -30,7 +30,7 @@ class randomidentitygeneratorWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/randomidentitygenerator';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"count":{"type":"integer","required":false,"min":1,"max":10,"default":1}};
+        this.validationRules = {"count":{"type":"integer","required":false,"min":1,"max":100,"default":1},"includeAvatar":{"type":"boolean","required":false,"default":false}};
     }
 
     /**

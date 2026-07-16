@@ -14,6 +14,12 @@ namespace APIVerve.API.RandomIdentityGenerator
         /// The number of identities to create
         /// </summary>
         [JsonProperty("count")]
-        public string Count { get; set; }
+        public int? Count { get; set; }
+
+        /// <summary>
+        /// Include an AI-generated face avatar for each identity
+        /// </summary>
+        [JsonProperty("includeAvatar")]
+        public bool? IncludeAvatar { get; set; }
     }
 }

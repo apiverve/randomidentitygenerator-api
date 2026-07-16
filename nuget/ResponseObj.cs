@@ -25,9 +25,21 @@ namespace APIVerve.API.RandomIdentityGenerator
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
+    {
+        [JsonProperty("count")]
+        public long? Count { get; set; }
+
+        [JsonProperty("identities")]
+        public Identity[] Identities { get; set; }
+    }
+
+    public partial class Identity
     {
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -51,10 +63,13 @@ namespace APIVerve.API.RandomIdentityGenerator
         public string Gender { get; set; }
 
         [JsonProperty("birthdate")]
-        public DateTimeOffset Birthdate { get; set; }
+        public DateTimeOffset? Birthdate { get; set; }
 
         [JsonProperty("cell")]
         public string Cell { get; set; }
+
+        [JsonProperty("avatar")]
+        public Uri Avatar { get; set; }
     }
 
     public partial class Company
@@ -67,5 +82,17 @@ namespace APIVerve.API.RandomIdentityGenerator
 
         [JsonProperty("bs")]
         public string Bs { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }

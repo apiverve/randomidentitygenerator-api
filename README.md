@@ -1,13 +1,13 @@
-# [Random Identity Generator API](https://apiverve.com/marketplace/randomidentitygenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Random Identity Generator API](https://apiverve.com/marketplace/randomidentitygenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Random Identity is a simple tool for generating random identities. It returns a random name, address, and more.
+Random Identity Generator creates synthetic user profiles with realistic names, usernames, email addresses, phone numbers, and gender attributes. Paid plans add batch generation, birthdates, company details, and AI-generated avatars.
 
 The Random Identity Generator API provides a simple, reliable way to integrate random identity generator functionality into your applications. Built for developers who need production-ready random identity generator capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/randomidentitygenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/randomidentitygenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/randomidentitygenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/randomidentitygenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -157,7 +157,7 @@ go get github.com/apiverve/randomidentitygenerator-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Random Identity Generator API](https://apiverve.com/marketplace/randomidentitygenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Random Identity Generator API](https://apiverve.com/marketplace/randomidentitygenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/randomidentitygenerator](https://docs.apiverve.com/ref/randomidentitygenerator)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -187,11 +187,46 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Random Identity Generator API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "count": 1,
+    "identities": [
+      {
+        "name": "Dr. Brent Carter",
+        "username": "Fannie_Treutel28",
+        "email": "Greyson.DAmore99@hotmail.com",
+        "phone": "862-207-2982 x6455",
+        "website": "mervin.net",
+        "company": {
+          "name": "Runolfsson, Gaylord and Christiansen",
+          "catchPhrase": "Profit-focused didactic algorithm",
+          "bs": "brand ubiquitous paradigms"
+        },
+        "gender": "Male",
+        "birthdate": "1978-11-23",
+        "cell": "1-514-413-1724",
+        "avatar": "https://storage.googleapis.com/apiverve/APIResources/faces/Male/40-50/87654321.jpg?X-Goog-Signature=..."
+      }
+    ]
+  }
 }
 ```
 
@@ -199,7 +234,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Random Identity Generator API](https://apiverve.com/marketplace/randomidentitygenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Random Identity Generator API](https://apiverve.com/marketplace/randomidentitygenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

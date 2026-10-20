@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/randomidentitygenerator",
-  "version": "1.2.0",
-  "description": "Random Identity is a simple tool for generating random identities. It returns a random name, address, and more.",
+  "version": "1.2.2",
+  "description": "Random Identity Generator creates synthetic user profiles with realistic names, usernames, email addresses, phone numbers, and gender attributes. Paid plans add batch generation, birthdates, company details, and AI-generated avatars.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "random identity", "random identity generator", "random identity api", "random identity tool", "random identity software"
+    "random identity generator", "random identity api", "fake identity generator", "random name generator api", "identity generator api"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/randomidentitygenerator-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/randomidentitygenerator?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/randomidentitygenerator?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",

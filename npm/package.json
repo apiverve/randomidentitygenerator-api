@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/randomidentitygenerator",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Random Identity Generator creates synthetic user profiles with realistic names, usernames, email addresses, phone numbers, and gender attributes. Paid plans add batch generation, birthdates, company details, and AI-generated avatars.",
   "main": "index.js",
   "types": "index.d.ts",
